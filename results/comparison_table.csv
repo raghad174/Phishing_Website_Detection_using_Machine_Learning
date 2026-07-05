@@ -1,0 +1,7 @@
+Model	Accuracy	Precision	Recall	F1 Score
+0	XGBoost	0.8705	0.9234	0.808	0.8619
+1	Random Forest	0.8670	0.9248	0.799	0.8573
+2	Decision Tree	0.8650	0.9254	0.794	0.8547
+3	Multilayer Perceptron	0.8550	0.8910	0.809	0.8480
+4	Support Vector Machine	0.8150	0.9660	0.653	0.7792
+5	Logistic Regression	0.7975	0.9268	0.646	0.7613
