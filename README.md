@@ -4,9 +4,15 @@
 
 This project reproduces and critically evaluates a published machine learning solution for phishing website detection.
 
-The objective is to classify websites as either **phishing** or **legitimate** using features extracted from URLs and website characteristics.
+The objective is to classify websites as either **phishing** or **legitimate** using handcrafted features extracted from URLs and website characteristics.
 
-As part of this project, I performed:
+In addition to reproducing the original work, this project extends the evaluation by implementing additional machine learning models and performing a more comprehensive performance analysis.
+
+---
+
+## Project Tasks
+
+The project includes:
 
 - Exploratory Data Analysis (EDA)
 - Correlation Analysis
@@ -14,7 +20,10 @@ As part of this project, I performed:
 - Class Distribution Analysis
 - Training and evaluation of multiple machine learning models
 - Model comparison
-- Critical evaluation of the original work
+- ROC Curve Analysis
+- Precision–Recall Curve Analysis
+- Threshold Analysis
+- Critical evaluation of the original project
 
 ---
 
@@ -29,13 +38,27 @@ The following machine learning models were implemented and compared:
 - Multilayer Perceptron (MLP)
 - XGBoost
 
+---
+
+## Evaluation Metrics
+
 The models were evaluated using:
 
 - Accuracy
 - Precision
 - Recall
 - F1-score
+- F2-score
+- Matthews Correlation Coefficient (MCC)
+- ROC-AUC
+- PR-AUC
 - Confusion Matrix
+
+Additional evaluation includes:
+
+- ROC Curve Comparison
+- Precision–Recall Curve Comparison
+- Threshold Analysis
 
 ---
 
@@ -49,11 +72,26 @@ https://github.com/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Te
 
 ## Repository Contents
 
-- Phishing_Website_Detection_using_Machine_Learning.ipynb
-- Phishing Website Detection using Machine Learning Techniques.pdf
-- 5.urldata.csv
-- requirements.txt
-- README.md
+```text
+Phishing_Website_Detection_using_Machine_Learning.ipynb
+Phishing_Website_Detection_Report.pdf
+5.urldata.csv
+requirements.txt
+README.md
+results/
+```
+
+The **results/** folder contains:
+
+- Confusion matrices
+- ROC Curve Comparison
+- Precision–Recall Curve Comparison
+- Precision vs Decision Threshold
+- Recall vs Decision Threshold
+- Feature Importance
+- Correlation Matrix
+- Class Distribution
+- Comparison Table
 
 ---
 
@@ -61,7 +99,7 @@ https://github.com/shreyagopal/Phishing-Website-Detection-by-Machine-Learning-Te
 
 The project was developed using **Python 3**.
 
-Install all required libraries using:
+Install the required libraries using:
 
 ```bash
 pip install -r requirements.txt
@@ -109,16 +147,25 @@ https://www.unb.ca/cic/datasets/url-2016.html
 
 ## Results Summary
 
-Six machine learning models were evaluated for phishing website detection.
+Six machine learning models were evaluated using multiple evaluation metrics.
 
-Among the evaluated models, **XGBoost** achieved the best overall performance with the highest Accuracy and F1-score.
+Among all evaluated models, **XGBoost** achieved the best overall performance across Accuracy, F1-score, MCC, and PR-AUC while also achieving one of the highest ROC-AUC values.
 
-Random Forest and Decision Tree also achieved strong performance, while Support Vector Machine obtained the highest Precision.
+Random Forest achieved very similar results, making both ensemble models the strongest classifiers for phishing website detection.
 
-The project also includes exploratory data analysis, feature importance analysis, class imbalance discussion, and a critical evaluation of the original study.
+The project also includes:
+
+- Exploratory Data Analysis
+- Feature Importance Analysis
+- Correlation Analysis
+- Class Distribution Analysis
+- ROC Curve Analysis
+- Precision–Recall Curve Analysis
+- Threshold Analysis
+- Critical evaluation of the original project
 
 ---
 
 ## Author
 
-This repository was created as part of a university assignment on phishing website detection using machine learning.
+This repository was created as part of the **Data Science in Cybersecurity** course at the **University of Haifa**.
